@@ -20,7 +20,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <TextView
+    <android.support.v7.widget.AppCompatTextView
         android:id="@+id/uri"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -35,7 +35,7 @@
         tools:text="content://media/external/images/media/12345"
         tools:textColor="@android:color/black" />
 
-    <TextView
+    <android.support.v7.widget.AppCompatTextView
         android:id="@+id/path"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

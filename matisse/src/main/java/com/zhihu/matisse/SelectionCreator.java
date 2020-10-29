@@ -16,15 +16,15 @@
  */
 package com.zhihu.matisse;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
-import androidx.annotation.IntDef;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
-import androidx.annotation.StyleRes;
-import androidx.fragment.app.Fragment;
+import android.support.annotation.IntDef;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
+import android.support.annotation.StyleRes;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 
 import com.zhihu.matisse.engine.ImageEngine;
 import com.zhihu.matisse.filter.Filter;
@@ -163,7 +163,7 @@ public final class SelectionCreator {
      *
      * @param maxImageSelectable Maximum selectable count for image.
      * @param maxVideoSelectable Maximum selectable count for video.
-     * @return  {@link SelectionCreator} for fluent API.
+     * @return {@link SelectionCreator} for fluent API.
      */
     public SelectionCreator maxSelectablePerMediaType(int maxImageSelectable, int maxVideoSelectable) {
         if (maxImageSelectable < 1 || maxVideoSelectable < 1)
@@ -216,6 +216,7 @@ public final class SelectionCreator {
 
     /**
      * Determines Whether to hide top and bottom toolbar in PreView mode ,when user tap the picture
+     *
      * @param enable
      * @return {@link SelectionCreator} for fluent API.
      */
@@ -253,7 +254,7 @@ public final class SelectionCreator {
      * @param orientation An orientation constant as used in {@link ScreenOrientation}.
      *                    Default value is {@link android.content.pm.ActivityInfo#SCREEN_ORIENTATION_PORTRAIT}.
      * @return {@link SelectionCreator} for fluent API.
-     * @see Activity#setRequestedOrientation(int)
+     * @see FragmentActivity#setRequestedOrientation(int)
      */
     public SelectionCreator restrictOrientation(@ScreenOrientation int orientation) {
         mSelectionSpec.orientation = orientation;
@@ -349,7 +350,7 @@ public final class SelectionCreator {
      * @param requestCode Identity of the request Activity or Fragment.
      */
     public void forResult(int requestCode) {
-        Activity activity = mMatisse.getActivity();
+        FragmentActivity activity = mMatisse.getActivity();
         if (activity == null) {
             return;
         }

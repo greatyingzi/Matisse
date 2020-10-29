@@ -26,7 +26,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp" />
 
-    <TextView
+    <android.support.v7.widget.AppCompatTextView
         android:id="@+id/album_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
         android:layout_marginLeft="8dp"
         android:layout_toRightOf="@id/album_cover" />
 
-    <TextView
+    <android.support.v7.widget.AppCompatTextView
         android:id="@+id/album_media_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

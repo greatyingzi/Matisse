@@ -15,7 +15,6 @@
  */
 package com.zhihu.matisse.internal.utils;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -24,9 +23,11 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.provider.MediaStore;
-import androidx.fragment.app.Fragment;
-import androidx.core.content.FileProvider;
-import androidx.core.os.EnvironmentCompat;
+
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.content.FileProvider;
+import android.support.v4.os.EnvironmentCompat;
 
 import com.zhihu.matisse.internal.entity.CaptureStrategy;
 
@@ -40,18 +41,18 @@ import java.util.Locale;
 
 public class MediaStoreCompat {
 
-    private final WeakReference<Activity> mContext;
+    private final WeakReference<FragmentActivity> mContext;
     private final WeakReference<Fragment> mFragment;
     private       CaptureStrategy         mCaptureStrategy;
     private       Uri                     mCurrentPhotoUri;
     private       String                  mCurrentPhotoPath;
 
-    public MediaStoreCompat(Activity activity) {
+    public MediaStoreCompat(FragmentActivity activity) {
         mContext = new WeakReference<>(activity);
         mFragment = null;
     }
 
-    public MediaStoreCompat(Activity activity, Fragment fragment) {
+    public MediaStoreCompat(FragmentActivity activity, Fragment fragment) {
         mContext = new WeakReference<>(activity);
         mFragment = new WeakReference<>(fragment);
     }

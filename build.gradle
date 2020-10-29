@@ -36,3 +36,6 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+ext{
+    supportVersion = "26.1.0"
+}

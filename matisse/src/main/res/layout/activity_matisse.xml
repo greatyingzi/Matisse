@@ -21,7 +21,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <androidx.appcompat.widget.Toolbar
+    <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
         android:theme="?toolbar"
         tools:targetApi="lollipop">
 
-        <TextView
+        <android.support.v7.widget.AppCompatTextView
             android:id="@+id/selected_album"
             android:layout_width="wrap_content"
             android:layout_height="?actionBarSize"
@@ -39,7 +39,7 @@
             android:gravity="center"
             android:textColor="?attr/album.element.color"
             android:textSize="20sp" />
-    </androidx.appcompat.widget.Toolbar>
+    </android.support.v7.widget.Toolbar>
 
     <FrameLayout
         android:id="@+id/bottom_toolbar"
@@ -50,7 +50,7 @@
         android:elevation="4dp"
         tools:targetApi="lollipop">
 
-        <TextView
+        <android.support.v7.widget.AppCompatTextView
             android:id="@+id/button_preview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -80,7 +80,7 @@
                 android:layout_width="16dp"
                 android:layout_height="16dp" />
 
-            <TextView
+            <android.support.v7.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -94,7 +94,7 @@
         </LinearLayout>
 
 
-        <TextView
+        <android.support.v7.widget.AppCompatTextView
             android:id="@+id/button_apply"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -121,7 +121,7 @@
         android:layout_below="@id/toolbar"
         android:visibility="gone">
 
-        <TextView
+        <android.support.v7.widget.AppCompatTextView
             android:id="@+id/empty_view_content"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
